@@ -1,0 +1,351 @@
+/* --- Global Resets --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #e4e7ea;
+  color: #23282c;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Portal Layout: full viewport height, footer at bottom --- */
+.portal-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.portal-main {
+  flex: 1;                     /* pushes footer to bottom */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px 40px;
+}
+
+/* --- Header --- */
+.portal-header {
+  background-color: #fff;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #c8ced3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-logo {
+  height: 80px;
+  width: auto;
+}
+
+/* --- Page Title --- */
+.portal-title {
+  color: #f97316;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0 0 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* --- Form Card --- */
+.form-card {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #20a8d8;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 860px;
+}
+
+.form-label {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #2f353a;           /* darker for legibility */
+  white-space: nowrap;
+}
+
+.required {
+  color: #f86c6b;
+  margin-left: 3px;
+}
+
+/* --- Input + Button (connected) --- */
+.input-group {
+  display: flex;
+  flex: 1;
+  max-width: 480px;
+}
+
+.id-input {
+  flex: 1;
+  padding: 11px 14px;
+  border: 1px solid #c8ced3;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+  color: #23282c;
+  background-color: #fff;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.id-input::placeholder {
+  color: #adb5bd;
+}
+
+.id-input:focus {
+  outline: none;
+  border-color: #20a8d8;
+  background-color: #f8f9fa;
+}
+
+.portal-btn {
+  background-color: #20a8d8;
+  color: #fff;
+  border: none;
+  padding: 11px 28px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.portal-btn:hover {
+  background-color: #1b8eb8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+/* --- Footer --- */
+.portal-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8rem;
+  color: #73818f;
+  background: #fff;
+  border-top: 1px solid #c8ced3;
+}
+
+/* ─── Result Page ─────────────────────────────────────────── */
+.result-page-container {
+  background-color: #e4e7ea;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.result-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 50px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+/* --- Result Header Info --- */
+.result-info {
+  border-bottom: 2px solid #f0f3f5;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+.result-info h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2f353a;
+  margin: 0 0 8px;
+}
+
+.result-info h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #5c6873;
+  margin: 0 0 6px;
+}
+
+.result-info h3 {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #73818f;
+  margin: 0;
+}
+
+/* --- Marksheet Display --- */
+.result-display {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border: 1px solid #c8ced3;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.marksheet-img {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Action Buttons --- */
+.action-btns {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.print-btn,
+.back-btn {
+  padding: 11px 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s;
+}
+
+.print-btn {
+  background-color: #4dbd74;
+  color: #fff;
+  border: none;
+}
+
+.print-btn:hover {
+  background-color: #44a665;
+}
+
+.back-btn {
+  background-color: #f0f3f5;
+  color: #2f353a;
+  border: 1px solid #c8ced3;
+}
+
+.back-btn:hover {
+  background-color: #e4e7ea;
+}
+
+/* ─── Responsive ──────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .form-card {
+    max-width: 90%;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Header */
+  .portal-header {
+    padding: 10px;
+  }
+  .header-logo {
+    height: 54px;
+  }
+
+  /* Title */
+  .portal-title {
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+  }
+
+  /* Form card: stack vertically */
+  .form-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 28px 20px;
+    width: 95%;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .form-label {
+    font-size: 1rem;
+  }
+
+  /* Input + button: stack vertically, full width */
+  .input-group {
+    flex-direction: column;
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .id-input {
+    width: 100%;
+    border-right: 1px solid #c8ced3;  /* restore right border when stacked */
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .portal-btn {
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  /* Result page */
+  .result-content {
+    padding: 24px 16px;
+  }
+
+  .result-info h1 {
+    font-size: 1.15rem;
+  }
+
+  .result-info h2 {
+    font-size: 0.95rem;
+  }
+
+  .result-info h3 {
+    font-size: 0.85rem;
+  }
+
+  .action-btns {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .print-btn,
+  .back-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ─── Print styles ────────────────────────────────────────── */
+@media print {
+  .action-btns,
+  .result-info {
+    display: none;
+  }
+
+  .result-page-container {
+    padding: 0;
+    background: none;
+  }
+
+  .result-content {
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .marksheet-img {
+    max-width: 100%;
+  }
+}
